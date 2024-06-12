@@ -4,7 +4,8 @@
 </head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CafeeDocument</title>
+    <title>Contact</title>
+   
 
     <img
     id="id-home"
@@ -49,9 +50,9 @@
         <input type="text"name="phone"id="id-phone">
         <br><br>
         <p> Description</p>
-        <textarea name="description" id ="" cols="30" rows="10" placeholder="Your Description"></textarea>
+        <textarea name="description" id ="id-description" cols="30" rows="10" placeholder="Your Description"></textarea>
         <br />
-        <button type="submit">submit here</button>
+        <button type="button" onclick="sendData()">submit here..</button>
         </form>
         <br />
         <br />
@@ -63,5 +64,21 @@
         <p>copyright &copy; 2020 </p>
 
         <a href="#Top" ; style="font-size: 20px;">Back To Top</a>
+
+        <script>
+            function sendData() {
+                const nameconstante= document.getElementById('id-name').value;
+
+                const emailconstante= document.getElementById('id-email').value;
+                const descriptionconstante= document.getElementById('id-description').value;
+
+                const data = {
+                    nom: nameconstante,
+                    email: emailconstante,
+                    description: descriptionconstante
+                };
+                console.log(JSON.stringify(data));
+            }
+        </script>
 </body>
 </html>
